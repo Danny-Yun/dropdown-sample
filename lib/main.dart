@@ -1,3 +1,5 @@
+import 'package:dropdown_sample1/binding/DropdownButtonControllerBinding.dart';
+
 import '/router/RoutePage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
@@ -18,6 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: RoutePage.HOME_ROUTE,
       getPages: RoutePage.getPageList,
+      initialBinding: DropdownButtonControllerBinding(),
     );
   }
 }
