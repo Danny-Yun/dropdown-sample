@@ -1,4 +1,8 @@
 import 'package:dropdown_sample1/controller/DropdownButtonController.dart';
+import 'package:dropdown_sample1/screen/Page1.dart';
+import 'package:dropdown_sample1/screen/Page2.dart';
+import 'package:dropdown_sample1/screen/Page3.dart';
+import 'package:dropdown_sample1/screen/Page4.dart';
 import 'package:dropdown_sample1/widgets/DropdownButton.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
@@ -20,28 +24,26 @@ class Home extends StatelessWidget {
               case menuList.menu1:
                 return Expanded(
                   child: Center(
-                    child: Text('page1'),
+                    child: Page1(),
                   ),
                 );
                 break;
               case menuList.menu2:
                 return Expanded(
-                  child: Center(
-                    child: Text('page2'),
-                  ),
+                  child: Page2(),
                 );
                 break;
               case menuList.menu3:
                 return Expanded(
                   child: Center(
-                    child: Text('page3'),
+                    child: Page3(),
                   ),
                 );
                 break;
               case menuList.menu4:
                 return Expanded(
                   child: Center(
-                    child: Text('page4'),
+                    child: Page4(),
                   ),
                 );
                 break;
