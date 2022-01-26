@@ -6,13 +6,13 @@ extension menuListExtension on menuList {
   String get name {
     switch (this) {
       case menuList.menu1:
-        return "page1";
+        return "menu1";
       case menuList.menu2:
-        return "page2";
+        return "menu2";
       case menuList.menu3:
-        return "page3";
+        return "menu3";
       case menuList.menu4:
-        return "page4";
+        return "menu4";
     }
   }
 }
@@ -20,9 +20,11 @@ extension menuListExtension on menuList {
 class DropdownButtonController extends GetxController {
   static DropdownButtonController get to => Get.find();
 
-  RxInt index = 0.obs;
+  Rx<menuList> currentItem = menuList.menu1.obs;
 
   void changeDropMenu(int? itemIndex) {
-    index(itemIndex);
+    var selectedItem =
+        menuList.values.where((menu) => menu.index == itemIndex).first;
+    currentItem(selectedItem);
   }
 }

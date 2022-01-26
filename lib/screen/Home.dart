@@ -4,6 +4,7 @@ import 'package:dropdown_sample1/screen/Page2.dart';
 import 'package:dropdown_sample1/screen/Page3.dart';
 import 'package:dropdown_sample1/screen/Page4.dart';
 import 'package:dropdown_sample1/widgets/DropdownButton.dart';
+import 'package:dropdown_sample1/widgets/PopupMenuButton.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 
@@ -18,9 +19,9 @@ class Home extends StatelessWidget {
       ),
       body: Column(
         children: [
-          DropdownButtonWidget(),
+          PopupMenuButtonWidget(),
           Obx(() {
-            switch (menuList.values[DropdownButtonController.to.index.value]) {
+            switch (DropdownButtonController.to.currentItem.value) {
               case menuList.menu1:
                 return Expanded(
                   child: Center(

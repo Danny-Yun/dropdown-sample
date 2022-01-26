@@ -9,7 +9,7 @@ class DropdownButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(
       () => DropdownButton(
-        value: DropdownButtonController.to.index.value,
+        value: DropdownButtonController.to.currentItem.value.index,
         onChanged: (int? value) => {
           DropdownButtonController.to.changeDropMenu(value),
         },
